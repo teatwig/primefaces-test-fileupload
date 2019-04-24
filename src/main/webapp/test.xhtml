@@ -9,10 +9,13 @@
         <title>PrimeFaces Test</title>
     </h:head>
     <h:body>
+        <h1>FileUpload Test</h1>
 
-        <h1>#{testView.testString}</h1>
+        <p>Select any file (e.g. the included README.md) and upload it.</p>
+        <p>Uploaded files should be saved in a "uploaded" folder, but instead an exception is thrown.</p>
 
-        <h1>#{testViewCdi.testString}</h1>
-
+        <h:form>
+            <p:fileUpload fileUploadListener="#{fileBean.handleFileUpload}"/>
+        </h:form>
     </h:body>
 </html>
